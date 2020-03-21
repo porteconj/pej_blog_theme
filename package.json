@@ -1,9 +1,8 @@
 {
-  "name": "HugoPipes-tailwindcss",
+  "name": "pejBlogTheme",
   "version": "2.0.0",
   "description": "Starter files for a Hugo project",
   "main": "index.js",
-  "repository": "https://github.com/budparr/hugopipes-tailwindcss",
   "author": "budparr <budparr@gmail.com>",
   "license": "MIT",
   "scripts": {

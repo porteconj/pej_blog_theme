@@ -32,3 +32,6 @@ public
 # Folders to ignore
 node_modules
 public
+exampleSite
+
+resources/_gen
