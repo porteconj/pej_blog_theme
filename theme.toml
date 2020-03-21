@@ -1,0 +1,20 @@
+name = "pejtheme"
+license = "MIT"
+licenselink = "https://github.com/NormandErwan/Blogpaper/blob/master/LICENSE"
+description = "A graphical newspaper like blog theme for Hugo."
+homepage = "https://normanderwan.github.io/Blogpaper"
+tags = [
+  "theme",
+  "hugo",
+  "blog",
+  "minimalist",
+  "graphical"
+]
+features = [
+  "minimalist",
+  "graphical"
+]
+
+[author]
+name = "Olaf Ghanizadeh"
+homepage = "https://normanderwan.fr"

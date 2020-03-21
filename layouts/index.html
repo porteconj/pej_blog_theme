@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="flex flex-wrap px-12 md:px-32">
+    {{ partial "sidebar.html" . }}
+    <div class="content w-full md:w-3/4 order-1 md:order-2">
+      {{range .Data.Pages }}
+        <article class="my-16">
+            <h2 class="text-3xl font-bold"><a href="{{.Permalink}}">{{.Title}}</a></h2>
+            <div class="leading-loose">
+                {{.Summary}}
+            </div>
+        </article>
+        {{end}}
+    </div>
+</section>
+
+
+
+
+{{ end }}

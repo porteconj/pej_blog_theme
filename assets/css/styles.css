@@ -1,0 +1,15 @@
+/* Base - Variables: tailwind-config.js */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+/* Site Specific */
+@import "site";
+@import "tailwindcss/utilities";
+
+p {
+    @apply my-8;
+}
+
+a {
+    @apply .text-red .font-bold .underline;
+}
+
