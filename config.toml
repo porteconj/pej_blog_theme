@@ -1,0 +1,12 @@
+
+
+# Add Content repo to pull content for development purposes
+[module]
+[[module.imports]]
+disable = false
+ignoreConfig = true
+path = "github.com/porteconj/research_report"
+
+[[module.mounts]]
+source = "content"
+target = "content"
