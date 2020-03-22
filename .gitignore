@@ -35,3 +35,4 @@ public
 exampleSite
 
 resources/_gen
+_vendor/

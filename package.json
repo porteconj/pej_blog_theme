@@ -29,5 +29,8 @@
     "rimraf": "^2.6.3",
     "tailwindcss": "^1.2.0",
     "turbolinks": "^5.2.0"
+  },
+  "dependencies": {
+    "lazysizes": "^5.2.0"
   }
 }

@@ -5,13 +5,18 @@
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
 
+a {
+  @apply underline;
+}
 
+p {
+  @apply my-8;
+}
 
 
 
 /* purgecss start ignore */
-
 
 /* purgecss end ignore */

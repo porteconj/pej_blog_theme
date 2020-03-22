@@ -1,0 +1,19 @@
+{{ $alt := .PlainText | safeHTML }}
+{{ $caption := "" }}
+{{ with .Title }}
+{{ $caption = . | safeHTML }}
+{{ end }}
+
+<figure>
+    <img 
+    data-sizes="auto"
+    data-src="https://via.placeholder.com/200/FF0000/FFFFFF" 
+    data-srcset="https://via.placeholder.com/300/FF0000/FFFFFF 300w,
+    https://netlify-photo-gallery.netlify.com/images/apple.jpg?nf_resize=smartcrop&w=600&h=400 600w,
+    https://netlify-photo-gallery.netlify.com/images/apple.jpg?nf_resize=smartcrop&w=900&h=600 900w"
+    class="image lazyload"
+    alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
+    {{ with $caption }}
+    <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
+    {{ end }}
+</figure>
