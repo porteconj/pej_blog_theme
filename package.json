@@ -28,7 +28,6 @@
     "postcss-modules": "^1.4.1",
     "rimraf": "^2.6.3",
     "tailwindcss": "^1.2.0",
-    "typeface-roboto": "^0.0.54",
     "turbolinks": "^5.2.0"
   }
 }

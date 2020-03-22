@@ -7,16 +7,9 @@
 @tailwind components;
 @tailwind utilities; 
 
-/* 
-  Uncomment to use Tailwind Utility Class CSS
-    @import "tailwind/tailwind.css";  
-*/
-
-/* @import "tailwind/tailwind.css";   */
 
 
-/* USE PURGE CSS ON ABOVE CODE ONLY. ANYTHING BETWEEN THE IGNORE TAGS BELOW WILL NOT BE IGNORED
-https://www.purgecss.com/whitelisting#in-the-css-directly */
+
 
 /* purgecss start ignore */
 
