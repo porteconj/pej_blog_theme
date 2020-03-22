@@ -2,7 +2,6 @@
 
 <head>
 
-  {{/*  We only want to run this process if there's a JS file  */}}
   {{ $js := resources.Get "output/index.js" }}
   {{ with $js }}
   {{ $secureJS := . | resources.Fingerprint }}
