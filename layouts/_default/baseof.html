@@ -1,24 +1,43 @@
 <html>
-  <head>
-    
-    
-{{ if .Site.IsServer }}
 
-  {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") | fingerprint }}
-    
-  <link rel="stylesheet" href="{{ $style.Permalink }}" data> 
+<head>
 
-{{ else }}
+  {{/*  We only want to run this process if there's a JS file  */}}
+  {{ if (fileExists "./assets/output/index.js") }}
+  {{ $js := resources.Get "output/index.js" }}
+  {{ with $js }}
+  {{ $secureJS := . | resources.Fingerprint }}
+  <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"
+    crossorigin="anonymous" defer></script>
+  {{ end }}
+  {{ end }}
 
-  {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js")  | minify | fingerprint }}
-  
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}"> 
+  {{ if .Site.IsServer }}
 
-{{ end }}
+  {{ $css := resources.Get "output/index.css"  }}
+  {{ with $css }}
+  {{ $securecss := . | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $securecss.Permalink | relURL  }}" integrity="{{ $securecss.Data.Integrity }}"
+    crossorigin="anonymous">
+  {{ end }}
 
-    
-  </head>
-  <body>
-    {{ block "main" . }}{{ end }}
-  </body>
+  {{ else }}
+
+
+  {{ $css := resources.Get "output/index.css" | minify }}
+  {{ with $css }}
+  {{ $securecss := . | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $securecss.Permalink | relURL  }}" integrity="{{ $securecss.Data.Integrity }}"
+    crossorigin="anonymous">
+  {{ end }}
+
+  {{ end }}
+
+
+</head>
+
+<body>
+  {{ block "main" . }}{{ end }}
+</body>
+
 </html>
