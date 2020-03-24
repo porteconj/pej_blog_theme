@@ -1,31 +1,33 @@
 <div class="sidebar relative w-full py-16 md:w-1/4 md:pr-16 order-3 md:order-1">
-<div class="sticky top-0 text-sm">
-    {{partial "header.html" . }}
-    {{with .Site.GetPage "sidebar.md"}}
-    {{with .Params.blogCurator}}
-    <h2 class="text-4xl leading-tight my-12 font-bold">{{.Params.Title | safeHTML}}</h2>
-    <h3>{{.name}}</h3>
-    <p>{{.description}}</p>
-    {{range .links}}
-    <a href="{{.link}}">{{.title}}</a>
-    {{end}}
-    {{end}}
-    <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
+    <div class="sticky top-0 text-sm">
+        {{partial "header.html" . }}
+        {{with .Site.GetPage "sidebar.md"}}
+        <h2 class="text-4xl leading-tight my-12 font-bold">{{.Params.Title | safeHTML}}</h2>
 
-    <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
-    {{.Params.BlogInfo}}
-    {{with .Params.sidebarLinks}}
-    <div class="mt-8">
-    <ul>
-    <li class="font-bold text-gray-500 uppercase">Useful links</li>
-        {{range . }}
-        <li class="py-1">
-            <a class="no-underline hover:underline" href="{{.url}}">{{.title}}</a>
-        </li>
+        {{with .Params.blogCurator}}
+        <p class="font-bold text-gray-500 uppercase my-0">Blog curator</p>
+
+        <h3>{{.name}}</h3>
+        <p>{{.description}}</p>
+        {{range .links}}
+        <a href="{{.link}}">{{.title}}</a>
         {{end}}
-    </ul>
-    </div>
-    {{end}}
-    {{end}}
+        {{end}}
+
+        <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
+        {{.Params.BlogInfo}}
+        {{with .Params.sidebarLinks}}
+        <div class="mt-8">
+            <ul>
+                <li class="font-bold text-gray-500 uppercase">Useful links</li>
+                {{range . }}
+                <li class="py-1">
+                    <a class="no-underline hover:underline" href="{{.url}}">{{.title}}</a>
+                </li>
+                {{end}}
+            </ul>
+        </div>
+        {{end}}
+        {{end}}
     </div>
 </div>
