@@ -7,7 +7,7 @@
 
 <figure>
     <img 
-    data-src="{{ $url }}/{{ .Destination | safeURL }}"
+    data-src="{{ $url }}{{ .Destination | safeURL }}"
     src="http://res.cloudinary.com/demo/image/upload/w_640,fl_progressive/sample.png" 
 
     class="image lazyload"
