@@ -8,7 +8,7 @@
 <figure>
     <img 
     data-src="{{ $url }}{{ .Destination | safeURL }}"
-    src="http://res.cloudinary.com/demo/image/upload/w_640,fl_progressive/sample.png" 
+    src="{{ $url }}w_640,fl_progressive/{{ .Destination | safeURL }}" 
 
     class="image lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
