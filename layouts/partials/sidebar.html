@@ -2,7 +2,15 @@
 <div class="sticky top-0 text-sm">
     {{partial "header.html" . }}
     {{with .Site.GetPage "sidebar.md"}}
+    {{with .Params.blogCurator}}
     <h2 class="text-4xl leading-tight my-12 font-bold">{{.Params.Title | safeHTML}}</h2>
+    <h3>{{.name}}</h3>
+    <p>{{.description}}</p>
+    {{range .links}}
+    <a href="{{.link}}">{{.title}}</a>
+    {{end}}
+    <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
+
     <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
     {{.Params.BlogInfo}}
     {{with .Params.sidebarLinks}}
