@@ -1,4 +1,5 @@
 {{$url := site.Params.cloudinaryURL }}
+{{$path := site.Params.cloudinaryPath }}
 {{ $alt := .PlainText | safeHTML }}
 {{ $caption := "" }}
 {{ with .Title }}
@@ -8,11 +9,11 @@
 <figure>
     <img 
     data-src="{{ $url }}{{ .Destination | safeURL }}"
-    src="{{ $url }}fl_progressive,q_1/{{ .Destination | safeURL }}" 
+    src="{{ $url }}fl_progressive/{{ .Destination | safeURL }}" 
 
     class="image lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
     {{ with $caption }}
-    <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
+    <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }} {{$path}}</figcaption>
     {{ end }}
 </figure>
