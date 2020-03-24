@@ -8,7 +8,7 @@
 <figure>
     <img 
     data-src="{{ $url }}{{ .Destination | safeURL }}"
-    src="{{ $url }}w_640,fl_progressive/{{ .Destination | safeURL }}" 
+    src="{{ $url }}w_640,q_1{{ .Destination | safeURL }}" 
 
     class="image lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
