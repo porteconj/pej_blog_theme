@@ -1,7 +1,9 @@
 {{ define "main" }}
 
 <section class="container mx-auto grid grid-cols-4 gap-8 w-8/12">
-    {{partial "logo.html" . }}
+    <div class="col-span-4">
+        {{partial "logo.html" . }}
+    </div>
     {{ partial "sidebar.html" . }}
     <div class="content col-span-4 md:col-span-3 order-1 md:order-2">
         <article class="my-16">
@@ -10,14 +12,14 @@
             <div class="leading-loose content">
                 {{.Content}}
             </div>
-                <div class="sharing my-6">
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink | safeURL}}"
-                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center no-underline">
-                        <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
-                        <span>Share on LinkedIn</span>
-                    </a>
-                </div>
+            <div class="sharing my-6">
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink | safeURL}}"
+                    class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center no-underline">
+                    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
+                    <span>Share on LinkedIn</span>
+                </a>
+            </div>
         </article>
     </div>
 
