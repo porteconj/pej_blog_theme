@@ -1,5 +1,5 @@
 <div class="sidebar relative w-full py-16 md:w-1/4 md:pr-16 order-3 md:order-1">
-    <div class="sticky top-0 text-sm">
+    <div class="text-sm">
         {{partial "header.html" . }}
         {{with .Site.GetPage "sidebar.md"}}
         <h2 class="text-4xl leading-tight my-12 font-bold">{{.Params.Title | safeHTML}}</h2>
