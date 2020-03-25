@@ -43,7 +43,11 @@ window.addEventListener('load', () =>{
 </head>
 
 <body>
-  {{ block "main" . }}{{ end }}
+<main class="container mx-auto grid grid-cols-4 gap-8">
+  {{ block "main" . }}
+  
+  {{ end }}
+</main>
 </body>
 
 </html>
