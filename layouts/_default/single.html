@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-<section class="container mx-auto flex flex-wrap px-12 md:px-32">
+<section class="container mx-auto grid grid-cols-4 gap-8 w-8/12">
     {{ partial "sidebar.html" . }}
-    <div class="content w-full md:w-3/4 order-1 md:order-2">
+    <div class="content col-span-4 md:col-span-3 order-1 md:order-2">
         <article class="my-16">
             <h1 class="text-5xl font-bold mb-6 leading-tight">{{.Title}}</h1>
             <span class="text-gray-600">{{.PublishDate.Format "January 2, 2006"}}</span>
