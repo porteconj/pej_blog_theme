@@ -9,7 +9,7 @@
 <figure>
     <img 
     data-src="{{ $url }}{{ .Destination | safeURL }}"
-    src="{{ $url }}q_1,e_blur:1000/{{ .Destination | safeURL }}" 
+    src="{{ $url }}/q_1,e_blur:1000/{{ .Destination | safeURL }}" 
 
     class="image lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
@@ -17,4 +17,3 @@
     <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
     {{ end }}
 </figure>
-{{ $url }}q_1,e_blur:1000/{{ .Destination | safeURL }}
