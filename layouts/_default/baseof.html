@@ -2,14 +2,6 @@
 
 <head>
 
-<!-- Include quicklink from dist -->
-<script src="https://unpkg.com/quicklink@2.0.0-alpha/dist/quicklink.umd.js"></script>
-<!-- Initialize (you can do this whenever you want) -->
-<script>
-window.addEventListener('load', () =>{
-  quicklink.listen();
-});
-</script>
 
   {{ $js := resources.Get "output/index.js" }}
   {{ with $js }}
