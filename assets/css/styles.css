@@ -11,9 +11,6 @@ a {
   @apply underline;
 }
 
-p {
-  @apply my-8;
-}
 
 
 
