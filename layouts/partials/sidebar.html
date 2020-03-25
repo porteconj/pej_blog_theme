@@ -5,19 +5,25 @@
         <h2 class="text-4xl leading-tight my-12 font-bold">{{.Params.Title | safeHTML}}</h2>
 
         {{with .Params.blogCurator}}
+        <div class="my-2">
         <p class="font-bold text-gray-500 uppercase my-0">Blog curator</p>
         <img src="{{$.Site.Params.cloudinaryURL}}/c_thumb,g_face{{.picture}}" alt="">
-        <h3>{{.name}}</h3>
+        <h3 class="text-2xl font-bold">{{.name}}</h3>
         <p>{{.description}}</p>
         {{range .links}}
-        <a href="{{.link}}">{{.title}}</a>
+        <a class="pl-2" href="{{.link}}">{{.title}}</a>
         {{end}}
         {{end}}
+        </div>
 
+        {{with .Params.BlogInfo}}
+        <div class="my-2">
         <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
-        {{.Params.BlogInfo}}
+        {{.}}
+        {{end}}
+        </div>
         {{with .Params.sidebarLinks}}
-        <div class="mt-8">
+        <div class="my-2">
             <ul>
                 <li class="font-bold text-gray-500 uppercase">Useful links</li>
                 {{range . }}
