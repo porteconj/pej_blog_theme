@@ -1,21 +1,18 @@
 {{ define "main" }}
-    <div class="col-span-4 md:col-span-1">
-        {{partial "logo.html" . }}
-    </div>
-    <div class="col-span-4 md:col-span-3"></div>
-    {{ partial "sidebar.html" . }}
-    <div class="content col-span-4 md:col-span-3 order-1 md:order-2">
-        {{range where .Site.Pages "Params.type" "post" }}
-        <article class="my-16">
-            <h2 class="text-3xl font-bold"><a href="{{.Permalink}}">{{.Title}}</a></h2>
-            {{with .PublishDate }}<span class="text-gray-600">{{.Format "January 2, 2006"}}</span>{{end}}
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+<div class="content col-span-4 md:col-span-3 order-1 md:order-2">
+    {{range where .Site.Pages "Params.type" "post" }}
+    <article class="my-16">
+        <h2 class="text-3xl font-bold"><a href="{{.Permalink}}">{{.Title}}</a></h2>
+        {{with .PublishDate }}<span class="text-gray-600">{{.Format "January 2, 2006"}}</span>{{end}}
 
-            <div class="leading-loose">
-                {{.Summary}}
-            </div>
-        </article>
-        {{end}}
-    </div>
+        <div class="leading-loose">
+            {{.Summary}}
+        </div>
+    </article>
+    {{end}}
+</div>
 
 
 
