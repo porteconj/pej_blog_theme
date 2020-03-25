@@ -6,7 +6,7 @@
 
         {{with .Params.blogCurator}}
         <p class="font-bold text-gray-500 uppercase my-0">Blog curator</p>
-
+        <img src="{{$.Site.Params.cloudinaryURL}}/{{.picture}}" alt="">
         <h3>{{.name}}</h3>
         <p>{{.description}}</p>
         {{range .links}}
