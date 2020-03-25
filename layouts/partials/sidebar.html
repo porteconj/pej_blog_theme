@@ -7,8 +7,8 @@
             <p class="font-bold text-gray-500 uppercase my-0 mb-4">Blog curator</p>
             <div class="mb-4">
                 <img class="h-32 w-32 rounded-full border-2"
-                    src="{{$.Site.Params.cloudinaryURL}}/w_200,h_200,c_thumb,g_face{{.picture}}"
-                    data-src="{{$.Site.Params.cloudinaryURL}}/w_200,h_200,c_thumb,g_face,e_blur:1000{{.picture}}"
+                    src="{{$.Site.Params.cloudinaryURL}}/w_200,h_200,c_thumb,g_face,e_blur:1000{{.picture}}"
+                    data-src="{{$.Site.Params.cloudinaryURL}}/{{.picture}}"
                     class="lazyload" alt="">
             </div>
             <h3 class="text-lg font-bold mb-4">{{.name}}</h3>
