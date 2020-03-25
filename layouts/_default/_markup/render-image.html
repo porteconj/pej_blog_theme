@@ -1,5 +1,6 @@
 {{$url := site.Params.cloudinaryURL }}
 {{$path := site.Params.cloudinaryPath }}
+{{$lqipParams := "q_1,e_blur:1000"}}
 {{ $alt := .PlainText | safeHTML }}
 {{ $caption := "" }}
 {{ with .Title }}
@@ -9,7 +10,7 @@
 <figure>
     <img 
     data-src="{{ $url }}{{ .Destination | safeURL }}"
-    src="{{ $url }}q_1,e_blur:1000/{{ .Destination | safeURL }}" 
+    src="{{ $url }}{{$lqipParams}}{{ .Destination | safeURL }}" 
 
     class="image lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
@@ -17,3 +18,4 @@
     <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
     {{ end }}
 </figure>
+{{$lqipParams}}
