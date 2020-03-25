@@ -1,6 +1,7 @@
 {{$url := site.Params.cloudinaryURL }}
 {{$path := site.Params.cloudinaryPath }}
-{{$lqipParams := "q_1,e_blur:1000"}}
+{{$fullParams := "f_auto"}}
+{{$lqipParams := "q_1,e_blur:1000,f_auto"}}
 {{ $alt := .PlainText | safeHTML }}
 {{ $caption := "" }}
 {{ with .Title }}
@@ -9,7 +10,7 @@
 
 <figure>
     <img 
-    data-src="{{ $url }}{{ .Destination | safeURL }}"
+    data-src="{{ $url }}{{$fullParams}}{{ .Destination | safeURL }}"
     src="{{ $url }}{{$lqipParams}}{{ .Destination | safeURL }}" 
 
     class="image lazyload"
