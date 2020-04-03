@@ -1,9 +1,9 @@
 {{ define "main" }}
 {{ partial "header.html" . }}
 {{ partial "sidebar.html" . }}
-<div class="content col-span-4 sm:col-span-3 order-1 sm:order-2">
+<div class="content col-span-4 lg:col-span-3 order-1 lg:order-2">
     {{range where .Site.Pages "Params.type" "post" }}
-    <article class="mb-32">
+    <article class="mb-16">
         <h2 class="text-3xl font-bold"><a href="{{.Permalink}}">{{.Title}}</a></h2>
         {{with .PublishDate }}<span class="text-gray-600">{{.Format "January 2, 2006"}}</span>{{end}}
 
