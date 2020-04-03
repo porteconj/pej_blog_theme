@@ -1,7 +1,11 @@
-<html>
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
 
-<head>
-
+<head itemscope itemtype="{{ .Site.BaseURL }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  {{ partial "meta" . }}
 
   {{ $js := resources.Get "output/index.js" }}
   {{ with $js }}
@@ -35,12 +39,12 @@
 </head>
 
 <body>
-<main class="container mx-auto grid grid-cols-4 gap-12 lg:gap-24 lg:items-start px-12 lg:px-0">
-  {{ block "main" . }}
-  
-  {{ end }}
-</main>
-{{ partial "footer.html" . }}
+  <main class="container mx-auto grid grid-cols-4 gap-12 lg:gap-24 lg:items-start px-12 lg:px-0">
+    {{ block "main" . }}
+
+    {{ end }}
+  </main>
+  {{ partial "footer.html" . }}
 
 </body>
 
