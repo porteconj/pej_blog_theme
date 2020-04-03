@@ -1,6 +1,8 @@
 <div class="col-span-4 lg:col-span-1 my-8">
     <a href="/">
-        {{ partial "logo.html" . }}
+        {{with  partial "logo.html" }}
+        {{.}}
+        {{end}}
     </a>
 </div>
 <div class="col-span-4 lg:col-span-3 lg:my-8"></div>

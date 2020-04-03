@@ -1,9 +1,9 @@
-<title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
-<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
-<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<title itemprop="name">{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}</title>
+<meta property="og:title" content="{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}" />
+<meta name="twitter:title" content="{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}" />
 <meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
-<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 
 <meta name="description" content="{{ .Params.description }}" />
 <meta itemprop="description" content="{{ .Params.description }}" />
