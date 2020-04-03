@@ -11,6 +11,9 @@ a {
   @apply underline text-pejRed;
 }
 
+a {
+  @apply my-8;
+}
 
 
 
