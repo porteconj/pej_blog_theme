@@ -10,8 +10,8 @@
 
 <figure>
     <img 
-    data-src="{{ $url }}{{$fullParams}}{{ .Destination | safeURL }}"
-    src="{{ $url }}{{$lqipParams}}{{ .Destination | safeURL }}" 
+    data-src="{{ $url }}{{$fullParams}}/{{ .Destination | safeURL }}"
+    src="{{ $url }}{{$lqipParams}}/{{ .Destination | safeURL }}" 
 
     class="image lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
