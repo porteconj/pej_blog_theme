@@ -1,7 +1,7 @@
 <div class="sidebar col-span-4 lg:col-span-1 order-3 lg:order-1">
     <div class="text-sm">
         {{with .Site.GetPage "sidebar.md"}}
-        <h2 class="text-4xl leading-tight font-bold">{{.Params.Title | safeHTML}}</h2>
+        <h2 class="text-4xl leading-tight font-bold"><a href="{{.Site.BaseURL}}">{{.Params.Title | safeHTML}}</a></h2>
         {{with .Params.blogCurator}}
         <div class="my-6">
             <p class="font-bold text-gray-500 uppercase my-0 mb-4">Blog curator</p>
