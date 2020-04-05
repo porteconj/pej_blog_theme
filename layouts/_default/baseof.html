@@ -1,5 +1,5 @@
 <!doctype html>
-<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+<html class="bg-gray-100 antialiased" prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
 
 <head itemscope itemtype="{{ .Site.BaseURL }}">
   <meta charset="utf-8" />
@@ -39,7 +39,7 @@
 </head>
 
 <body>
-  <main class="bg-gray-100 antialiased container mx-auto grid grid-cols-4 gap-12 lg:gap-24 lg:items-start px-12 lg:px-0">
+  <main class="container mx-auto grid grid-cols-4 gap-12 lg:gap-24 lg:items-start px-12 lg:px-0">
     {{ block "main" . }}
 
     {{ end }}
