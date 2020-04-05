@@ -15,17 +15,14 @@ a {
   @apply my-8;
 }
 
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
 .lazyloaded {
-	-webkit-filter: blur(0);
-	filter: blur(0);
+	opacity: 1;
+	transition: opacity 300ms;
 }
-
-.lazyload {
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
-	transition: filter 3000ms 500ms, -webkit-filter 3000ms 500ms;
-}
-
 
 
 /* purgecss start ignore */
