@@ -12,7 +12,7 @@
     <img 
     data-src="{{ $url }}{{$fullParams}}{{ .Destination | safeURL }}"
     src="{{ $url }}{{$lqipParams}}{{ .Destination | safeURL }}" 
-    class="image lazyload blur-up"
+    class="lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
     {{ with $caption }}
     <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
