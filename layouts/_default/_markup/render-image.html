@@ -1,7 +1,7 @@
 {{$url := site.Params.cloudinaryURL }}
 {{$path := site.Params.cloudinaryPath }}
 {{$fullParams := "/f_auto"}}
-{{$lqipParams := "/q_1,e_blur:1000,f_auto"}}
+{{$lqipParams := "/q_1,e_pixelate:10,f_auto"}}
 {{ $alt := .PlainText | safeHTML }}
 {{ $caption := "" }}
 {{ with .Title }}
