@@ -8,13 +8,15 @@
 {{ $caption = . | safeHTML }}
 {{ end }}
 
-<figure>
+<figure class="wrapper">
+    <div class="mediabox">
     <img 
     data-src="{{ $url }}{{$fullParams}}{{ .Destination | safeURL }}"
-    src="{{ $url }}{{$lqipParams}}{{ .Destination | safeURL }}" 
+    data-lowsrc="{{ $url }}{{$lqipParams}}{{ .Destination | safeURL }}" 
 
     class="image lazyload"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
+</div>
     {{ with $caption }}
     <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
     {{ end }}
