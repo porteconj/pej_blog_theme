@@ -15,12 +15,12 @@ a {
   @apply my-8;
 }
 
-.blur-up .lazyloaded {
+.lazyloaded {
 	-webkit-filter: blur(0);
 	filter: blur(0);
 }
 
-.blur-up {
+.lazyload {
 	-webkit-filter: blur(5px);
 	filter: blur(5px);
 	transition: filter 3000ms 500ms, -webkit-filter 3000ms 500ms;
