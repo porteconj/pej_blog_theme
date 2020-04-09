@@ -1,6 +1,8 @@
 <title itemprop="name">{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}</title>
-<meta property="og:title" content="{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}" />
-<meta name="twitter:title" content="{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}" />
+<meta property="og:title"
+    content="{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}" />
+<meta name="twitter:title"
+    content="{{if .IsHome }} {{ .Site.Title }} {{else}} {{ .Title }} | {{ .Site.Title }} {{end}}" />
 <meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
@@ -11,9 +13,9 @@
 <meta name="twitter:description" content="{{ .Params.description }}" />
 
 <base href="{{ .Permalink }}">
-<link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 <meta name="url" content="{{ .Permalink }}" />
-<meta name="twitter:url" content="{{ .Permalink }}" /> 
+<meta name="twitter:url" content="{{ .Permalink }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 
 <meta property="og:locale" content="{{ .Language.Lang }}">
@@ -22,5 +24,11 @@
 <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
 
 
-<meta name="robots" content="index,follow" /> 
+{{with .Site.Params.seoImage}}
+<meta property="og:image" content="{{.}}">
+<meta name="twitter:image" content="{{.}}">
+{{end}}
+
+
+<meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
