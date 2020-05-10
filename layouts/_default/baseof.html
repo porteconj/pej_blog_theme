@@ -45,6 +45,9 @@
     {{ end }}
   </main>
   {{ partial "footer.html" . }}
+  {{with .Site.Params.analyticsID}}
+    {{partial "analytics.html" .}}
+  {{ end }}
 
 </body>
 
