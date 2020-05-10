@@ -45,7 +45,7 @@
     {{ end }}
   </main>
   {{ partial "footer.html" . }}
-  {{with .Site.Params.analyticsID}}
+  {{ if hugo.IsProduction }}
     {{partial "analytics.html" .}}
   {{ end }}
 
