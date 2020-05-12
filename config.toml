@@ -4,7 +4,6 @@ title = "test"
 [params]
 cloudinaryURL = "https://res.cloudinary.com/portuguese-economic-journal/image/upload/"
 cloudinaryPath = "research_report"
-footerText = "This blog is an initiave of the Portugese Economic Journal. The forum runs independently from the Portuguese Economic Journal (PEJ) and papers published on the blog have no obligation or right towards the journal. The forum is not affiliated with any religion, political parties and ideologies. Participants are responsible for opinions expressed therein."
 seoImage = "https://res.cloudinary.com/portuguese-economic-journal/image/upload/v1586458023/research_report/ograph_jf38qz.png"
 seoImageWidth = 1200
 seoImageHeight = 630
