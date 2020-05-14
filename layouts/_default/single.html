@@ -20,11 +20,20 @@
                     <span>Share on LinkedIn</span>
                 </a>
             </div>
-            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>            </div>
+            <div class="sharing my-6">
+                <a href="    https://www.facebook.com/sharer/sharer.php?u={{.Permalink | safeURL}}"
+                    class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-baseline no-underline">
+                    <svg class="fill-current w-4 h-4 mr-2" height="512" viewBox="0 0 24 24" width="512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" />
+                    </svg>
+                    <span>Share on LinkedIn</span>
+                </a>
+            </div>
     </article>
 </div>
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=261221720584411"></script>
+
 
 {{ end }}
