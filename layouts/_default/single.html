@@ -8,17 +8,30 @@
         <div class="leading-loose content">
             {{.Content}}
         </div>
-        <div class="sharing my-6">
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink | safeURL}}"
-                class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-baseline no-underline">
-                <svg class="fill-current w-4 h-4 mr-2" height="512" viewBox="0 0 24 24" width="512"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" />
+        <div class="flex">
+            <div class="sharing my-6">
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink | safeURL}}"
+                    class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-baseline no-underline">
+                    <svg class="fill-current w-4 h-4 mr-2" height="512" viewBox="0 0 24 24" width="512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" />
                     </svg>
-                <span>Share on LinkedIn</span>
-            </a>
-        </div>
+                    <span>Share on LinkedIn</span>
+                </a>
+            </div>
+            <div class="fb-share-button" data-href="{{.Permalink | safeURL}}" data-layout="button">
+            </div>
     </article>
 </div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 {{ end }}
