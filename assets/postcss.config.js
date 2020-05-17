@@ -9,7 +9,7 @@ module.exports = {
 		...(process.env.NODE_ENV !== "development"
 			? [
 					require("@fullhuman/postcss-purgecss")({
-						content: ["./layouts/**/*.html", "./components/**/**/*.html"],
+						content: ["./layouts/**/*.html", "./layouts/**/**/*.*.html"],
 						extractors: [
 							{
 								extractor: class {

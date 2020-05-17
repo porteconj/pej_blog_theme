@@ -7,3 +7,15 @@ cloudinaryPath = "research_report"
 seoImage = "https://res.cloudinary.com/portuguese-economic-journal/image/upload/v1586458023/research_report/ograph_jf38qz.png"
 seoImageWidth = 1200
 seoImageHeight = 630
+
+[outputFormats]
+[outputFormats.HTML]
+mediaType = "text/html"
+[outputFormats.card]
+mediaType = "text/html"
+path = "card"
+permalinkable = true
+
+[outputs]
+  home = ["HTML", "json"]
+  page = ["HTML", "card"]
