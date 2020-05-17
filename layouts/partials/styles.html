@@ -10,7 +10,7 @@
   {{ else }}
 
 
-  {{ $css := resources.Get "output/index.css" | minify }}
+  {{ $css := resources.Get "output/index.css" }}
   {{ with $css }}
   {{ $securecss := . | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $securecss.Permalink | relURL  }}" integrity="{{ $securecss.Data.Integrity }}"
