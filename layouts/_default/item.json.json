@@ -1,0 +1,7 @@
+{
+{{ with  .OutputFormats.Get "card" -}}
+{{$filename := $.Title | urlize}}
+"filename" : "{{$filename | replaceRE "[[:punct:]]" "-" }}",
+"path" : "{{ .Permalink }}"
+{{end}}
+}

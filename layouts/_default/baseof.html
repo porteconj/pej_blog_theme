@@ -14,27 +14,7 @@
     crossorigin="anonymous" defer></script>
   {{ end }}
 
-  {{ if .Site.IsServer }}
-
-  {{ $css := resources.Get "output/index.css"  }}
-  {{ with $css }}
-  {{ $securecss := . | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $securecss.Permalink | relURL  }}" integrity="{{ $securecss.Data.Integrity }}"
-    crossorigin="anonymous">
-  {{ end }}
-
-  {{ else }}
-
-
-  {{ $css := resources.Get "output/index.css" | minify }}
-  {{ with $css }}
-  {{ $securecss := . | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $securecss.Permalink | relURL  }}" integrity="{{ $securecss.Data.Integrity }}"
-    crossorigin="anonymous">
-  {{ end }}
-
-  {{ end }}
-
+  {{partial "styles.html" . }}
 
 </head>
 

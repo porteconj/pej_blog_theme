@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main role="main" class="container mx-auto flex-col">
+    {{ with readFile "/static/logo.svg"  }}
+    {{. | safeHTML}}
+    {{end}}
+<h1 class="text-5xl font-bold my-16">{{.Title}}</h1> 
+{{with .Params.subtitle}}
+<span class="text-2xl">{{.}}</span>
+{{end}}
+</main>
+
+{{ end }}

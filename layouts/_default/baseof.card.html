@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+
+<head>
+  {{partial "styles.html" . }}
+
+</head>
+
+<body>
+  <div class="grid-container">
+    {{- block "main" . }}
+    
+    {{- end }}
+  </div>
+</body>
+
+</html>
