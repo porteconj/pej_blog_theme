@@ -3,10 +3,15 @@
 
 <head>
   {{partial "styles.html" . }}
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
   <div class="grid-container">
     {{- block "main" . }}
     
