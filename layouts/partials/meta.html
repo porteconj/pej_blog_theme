@@ -27,11 +27,13 @@
 {{with .Site.Params.seoImage}}
 <meta property="og:image" content="{{.}}">
 <meta name="twitter:image" content="{{.}}">
+<meta name="twitter:card" content="summary_large_image">
 {{end}}
 {{else}}
 {{$filename := $.Title | urlize}}
 <meta property="og:image" content="{{$.Site.Params.seoImagePath}}{{$filename | replaceRE "[[:punct:]]" "-" }}.png">
 <meta name="twitter:image" content="{{$.Site.Params.seoImagePath}}{{$filename | replaceRE "[[:punct:]]" "-" }}.png">
+<meta name="twitter:card" content="summary_large_image">
 {{end}}
 
 
