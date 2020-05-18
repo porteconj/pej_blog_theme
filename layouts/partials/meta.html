@@ -23,10 +23,15 @@
 
 <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
 
-
+{{if .IsHome }}
 {{with .Site.Params.seoImage}}
 <meta property="og:image" content="{{.}}">
 <meta name="twitter:image" content="{{.}}">
+{{end}}
+{{else}}
+{{$filename := $.Title | urlize}}
+<meta property="og:image" content="{{$.Site.Params.seoImagePath}}{{$filename | replaceRE "[[:punct:]]" "-" }}.png">
+<meta name="twitter:image" content="{{$.Site.Params.seoImagePath}}{{$filename | replaceRE "[[:punct:]]" "-" }}.png">
 {{end}}
 
 

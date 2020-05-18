@@ -7,6 +7,7 @@ cloudinaryPath = "research_report"
 seoImage = "https://res.cloudinary.com/portuguese-economic-journal/image/upload/v1586458023/research_report/ograph_jf38qz.png"
 seoImageWidth = 1200
 seoImageHeight = 630
+seoImagePath = "https://pej-previewimages.netlify.app/img/"
 
 [outputFormats]
 [outputFormats.HTML]
