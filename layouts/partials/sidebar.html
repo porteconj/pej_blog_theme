@@ -17,7 +17,17 @@
             {{end}}
             {{end}}
         </div>
-
+        {{with .Site.Params.netlifyFetch }}
+        <div class="my-6">
+            <p class="font-bold text-gray-500 uppercase my-0 mb-4">Blog visitors</p>
+            {{ $ga := getJSON {{.}} }}
+            {{with $ga}}
+            {{range .}}
+            <span class="font-bold text-pejGreen">{{.}}</span>
+            {{end}}
+            {{end}}
+        </div>
+        {{end}}
         {{with .Params.BlogInfo}}
         <div class="my-6">
             <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
