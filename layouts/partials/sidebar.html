@@ -20,7 +20,7 @@
         {{with .Site.Params.netlifyFetch }}
         <div class="my-6">
             <p class="font-bold text-gray-500 uppercase my-0 mb-4">Blog visitors</p>
-            {{ $ga := getJSON {{.}} }}
+            {{ $ga := getJSON ($.Site.Params.netlifyFetch) }}
             {{with $ga}}
             {{range .}}
             <span class="font-bold text-pejGreen">{{.}}</span>
