@@ -19,12 +19,17 @@
         </div>
         {{with .Site.Params.netlifyFetch }}
         <div class="my-6">
-            <p class="font-bold text-gray-500 uppercase my-0 mb-4">Blog visitors</p>
+            <p class="font-bold text-gray-500 uppercase my-0 mb-4">Visitor statistics</p>
             {{ $ga := getJSON ($.Site.Params.netlifyFetch) }}
             {{with $ga}}
-            {{range .}}
-            <span class="font-bold text-pejGreen">{{.}}</span>
-            {{end}}
+            <div class="flex justify-between">
+                <span class="font-bold text-gray-600">Unique</span>
+                <span class="font-bold text-pejGreen">{{index . "ga:sessions"}}</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-bold text-gray-600">Total views</span>
+                <span class="font-bold text-pejGreen">{{index . "ga:pageviews"}}</span>
+            </div>
             {{end}}
         </div>
         {{end}}
