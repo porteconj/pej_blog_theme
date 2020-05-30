@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="bg-gray-100 antialiased" prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+<html class="bg-gray-100 antialiased" prefix="og:http://ogp.me/ns#" lang="{{ .Language }}">
 
 <head itemscope itemtype="{{ .Site.BaseURL }}">
   <meta charset="utf-8" />
@@ -24,7 +24,7 @@
 
     {{ end }}
   </main>
-  {{ partial "footer.html" . }}
+  {{ partialCached "footer.html" . }}
   {{ if hugo.IsProduction }}
     {{partial "analytics.html" .}}
   {{ end }}

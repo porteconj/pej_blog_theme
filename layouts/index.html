@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
-{{ partial "sidebar.html" . }}
+{{ partialCached "header.html" . }}
+{{ partialCached "sidebar.html" . }}
 <div class="content col-span-4 lg:col-span-3 order-1 lg:order-2">
     {{range where .Site.Pages "Params.type" "post" }}
     <article class="mb-16">
