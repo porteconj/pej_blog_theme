@@ -23,13 +23,14 @@
             {{ $ga := getJSON ($.Site.Params.netlifyFetch) }}
             {{with $ga}}
             <div class="flex justify-between">
-                <span class="font-bold text-gray-600">Unique</span>
-                <span class="font-bold text-pejGreen">{{index . "ga:sessions"}}</span>
-            </div>
-            <div class="flex justify-between">
                 <span class="font-bold text-gray-600">Total views</span>
                 <span class="font-bold text-pejGreen">{{index . "ga:pageviews"}}</span>
             </div>
+            <div class="flex justify-between">
+                <span class="font-bold text-gray-600">Unique</span>
+                <span class="font-bold text-pejGreen">{{index . "ga:sessions"}}</span>
+            </div>
+
             {{end}}
         </div>
         {{end}}
