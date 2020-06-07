@@ -1,21 +1,30 @@
-{{$url := site.Params.cloudinaryURL }}
-{{$path := site.Params.cloudinaryPath }}
-{{$fullParams := "/f_auto"}}
-{{$lqipParams := "/q_1,e_pixelate:10,f_auto"}}
+{{$path := "/uploads/" }}
 {{ $alt := .PlainText | safeHTML }}
 {{ $caption := "" }}
 {{ with .Title }}
 {{ $caption = . | safeHTML }}
 {{ end }}
+{{$image := (site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" .Destination)}}
 
-<figure>
-    <img 
-    data-src="{{ $url }}{{$fullParams}}{{ .Destination | safeURL }}"
-    src="{{ $url }}{{$lqipParams}}{{ .Destination | safeURL }}" 
-    class="lazyload"
-    alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}">
-    {{ with $caption }}
-    <figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
-    {{ end }}
+<div class="wrapper">
+<figure class="mediabox">
+  {{with $image }}
+  {{with . }}
+  {{$lqip := (.Resize "40x Gaussian")}}
+  {{ $src1x := (.Resize "500x Center") }}
+  {{ $src2x := (.Resize "1280x Center") }}
+  <img 
+  data-sizes="auto" 
+  data-srcset="{{$src1x.RelPermalink}} 1x, {{$src2x.RelPermalink}} 2x" 
+  data-lowsrc="{{$lqip.RelPermalink}}" 
+  class="lazyload mediabox-img"
+  alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
+  >
+  {{end}}
+  {{end}}
+
 </figure>
-
+{{ with $caption }}
+<figcaption class="mb-4"><strong class="font-bold uppercase">Caption:</strong> {{ . | markdownify }}</figcaption>
+{{ end }}
+</div>
