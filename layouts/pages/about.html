@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+{{ partial "sidebar.html" . }}
+<div class="content col-span-4 lg:col-span-3 order-1 lg:order-2">
+    <h1>{{.Title}}</h1>
+{{.Content}}
+    <div class="grid grid-cols-3 gap-y-2">
+{{range .Params.blogCurator}}
+<div>
+    <img class="rounded-sm" src="https://res.cloudinary.com/portuguese-economic-journal/image/upload//w_200,h_200,c_thumb,g_face,z_0.6/v1585074958/research_report/rui_zarg8m.jpg" alt="">
+</div>
+<div class="col-span-2">
+    <h2 class="text-xl font-bold">{{.name}}</h2>
+    <p>{{.description}}</p>
+</div>
+
+{{end}}
+</div>
+</div>
+{{end}}
