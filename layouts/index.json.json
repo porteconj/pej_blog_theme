@@ -1,10 +1,12 @@
 {{ define "response" }}
     {
         "cards" : [
-        {{$pages := where .Site.Pages ".Params.type" "post"}}
+        {{$pages := where .Site.Pages "Section" "posts"}}
+        {{ if ne .File.LogicalName "_index.md" }}
         {{ range $i, $e := $pages}}
             {{- if $i -}}, {{ end -}}{{ .Render "item" }}
         {{ end }}
+        {{end}}
         ]
     }
 {{ end }}
