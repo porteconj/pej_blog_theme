@@ -3,8 +3,7 @@
         {{with .Site.GetPage "sidebar.md"}}
         <h2 class="text-4xl leading-tight font-bold mb-12"><a class="text-black no-underline"
                 href="{{.Site.BaseURL}}">{{.Params.Title | safeHTML}}</a></h2>
-        {{with .Params.blogCurator}}
-        {{range .}}
+        {{with .Params.blogCurators}}
         {{range .}}
         <div class="mb-8">
             <img class="h-32 w-32 rounded-full border-2 border-pejGreen mb-4"
@@ -13,7 +12,7 @@
             {{with .title}}
             <span class="text-xs text-gray-500 uppercase font-bold block">{{.}}</span>
             {{end}}
-            {{with .description}}
+            {{with .bio}}
             <p>{{.}}</p>
             {{end}}
             {{range .links}}
@@ -23,7 +22,6 @@
 
 
 
-        {{end}}
         {{end}}
         {{end}}
         {{with .Site.Params.netlifyFetch }}
