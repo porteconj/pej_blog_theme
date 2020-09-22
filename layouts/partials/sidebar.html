@@ -1,22 +1,31 @@
 <div class="sidebar col-span-4 lg:col-span-1 order-3 lg:order-1">
     <div class="text-sm">
         {{with .Site.GetPage "sidebar.md"}}
-        <h2 class="text-4xl leading-tight font-bold"><a class="text-black no-underline"
+        <h2 class="text-4xl leading-tight font-bold mb-12"><a class="text-black no-underline"
                 href="{{.Site.BaseURL}}">{{.Params.Title | safeHTML}}</a></h2>
         {{with .Params.blogCurator}}
-        <div class="my-6">
-            <p class="font-bold text-gray-500 uppercase my-0 mb-4">Blog curator</p>
-            <div class="mb-4">
-                <img class="h-32 w-32 rounded-full border-2 border-pejGreen"
-                    src="{{$.Site.Params.cloudinaryURL}}/w_200,h_200,c_thumb,g_face,z_0.6{{.picture}}" alt="">
-            </div>
-            <h3 class="text-lg font-bold mb-4">{{.name}}</h3>
-            <p>{{.description}}</p>
+        {{range .}}
+        {{range .}}
+        <div class="mb-8">
+            <img class="h-32 w-32 rounded-full border-2 border-pejGreen mb-4"
+                src="{{$.Site.Params.cloudinaryURL}}/w_200,h_200,c_thumb,g_face,z_0.6{{.picture}}" alt="">
+            <h3 class="text-lg font-bold"> {{.name}}</h3>
+            {{with .title}}
+            <span class="text-xs text-gray-500 uppercase font-bold block">{{.}}</span>
+            {{end}}
+            {{with .description}}
+            <p>{{.}}</p>
+            {{end}}
             {{range .links}}
             <a class="pr-1" href="{{.link}}">{{.title}}</a>
             {{end}}
-            {{end}}
         </div>
+
+
+
+        {{end}}
+        {{end}}
+        {{end}}
         {{with .Site.Params.netlifyFetch }}
         <div class="my-6">
             <p class="font-bold text-gray-500 uppercase my-0 mb-4">Visitor statistics</p>
