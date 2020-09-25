@@ -17,6 +17,7 @@
   "@tailwindcss/typography": "^0.2.0",
   "autoprefixer": "^10.0.0",
   "lazysizes": "^5.2.2",
+  "postcss": "^8.0.9",
   "postcss-purgecss": "^2.0.3",
   "turbolinks": "^5.2.0"
  },
