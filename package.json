@@ -1,36 +1,34 @@
 {
-  "name": "hugo-pipes-parcel",
-  "version": "2.0.0",
-  "description": "Starter files for a Hugo project",
-  "main": "index.js",
-  "repository": "https://github.com/theNewDynamic/hugo-starter.git",
-  "author": "budparr <budparr@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "clean": "rimraf public/ assets/output static/output resources",
-    "build": "run-s deploy:assets build:hugo",
-    "start": "run-s build:assets dev",
-    "dev": "run-p dev:parcel dev:hugo",
-    "dev:hugo": "cross-env NODE_ENV=development hugo server --gc --disableFastRender --navigateToChanged",
-    "dev:parcel": "cross-env NODE_ENV=development parcel watch ./assets/index.js --out-dir assets/output",
-    "build:assets": "cross-env NODE_ENV=development parcel build ./assets/index.js --out-dir assets/output --experimental-scope-hoisting  --no-cache",
-    "deploy:assets": "cross-env NODE_ENV=production parcel build ./assets/index.js --out-dir assets/output --experimental-scope-hoisting --no-cache",
-    "build:hugo": "cross-env NODE_ENV=production hugo --gc --minify"
+ "author": "",
+ "comments": {
+  "dependencies": {
+   "@tailwindcss/typography": "project",
+   "autoprefixer": "project",
+   "lazysizes": "project",
+   "postcss-purgecss": "project",
+   "turbolinks": "project"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.1.0",
-    "autoprefixer": "^9.4.7",
-    "cross-env": "^5.2.0",
-    "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.11.0",
-    "postcss-cli": "^6.1.1",
-    "postcss-import": "^12.0.1",
-    "postcss-modules": "^1.4.1",
-    "rimraf": "^2.6.3",
-    "tailwindcss": "^1.4.0",
-    "turbolinks": "^5.2.0"
-  },
-  "dependencies": {
-    "lazysizes": "^5.2.0"
+   "postcss-cli": "project",
+   "tailwindcss": "project"
   }
+ },
+ "dependencies": {
+  "@tailwindcss/typography": "^0.2.0",
+  "autoprefixer": "^10.0.0",
+  "lazysizes": "^5.2.2",
+  "postcss": "^8.0.9",
+  "postcss-purgecss": "^2.0.3",
+  "turbolinks": "^5.2.0"
+ },
+ "description": "Starter files for a Hugo project",
+ "devDependencies": {
+  "postcss-cli": "^8.0.0",
+  "tailwindcss": "^1.8.10"
+ },
+ "license": "MIT",
+ "main": "index.js",
+ "name": "pej-blog-theme",
+ "repository": "",
+ "version": "2.0.0"
 }
