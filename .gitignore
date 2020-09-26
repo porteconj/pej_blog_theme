@@ -40,6 +40,5 @@ content/
 static/
 data/
 
-config.toml
 hugo_stats.json
 package.hugo.json
