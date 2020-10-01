@@ -5,24 +5,28 @@
    "@tailwindcss/typography": "project",
    "autoprefixer": "project",
    "lazysizes": "project",
-   "postcss-cli": "project",
    "postcss-purgecss": "project",
-   "tailwindcss": "project",
-   "turbolinks": "project"
+   "turbolinks": "project",
+   "postcss-cli": "project",
+   "tailwindcss": "project"
   },
-  "devDependencies": {}
+  "devDependencies": {
+
+  }
  },
  "dependencies": {
   "@tailwindcss/typography": "^0.2.0",
   "autoprefixer": "^10.0.0",
   "lazysizes": "^5.2.2",
-  "postcss-cli": "^8.0.0",
   "postcss-purgecss": "^2.0.3",
-  "tailwindcss": "^1.8.10",
-  "turbolinks": "^5.2.0"
+  "turbolinks": "^5.2.0",
+  "postcss-cli": "^8.0.0",
+  "tailwindcss": "^1.8.10"
  },
  "description": "Starter files for a Hugo project",
- "devDependencies": {},
+ "devDependencies": {
+
+ },
  "license": "MIT",
  "main": "index.js",
  "name": "pej-blog-theme",
