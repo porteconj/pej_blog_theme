@@ -4,11 +4,9 @@
   "dependencies": {
    "@tailwindcss/typography": "project",
    "autoprefixer": "project",
-   "lazysizes": "project",
    "postcss-cli": "project",
    "postcss-purgecss": "project",
-   "tailwindcss": "project",
-   "turbolinks": "project"
+   "tailwindcss": "project"
   },
   "devDependencies": {
    "@babel/preset-env": "project"
@@ -17,15 +15,18 @@
  "dependencies": {
   "@tailwindcss/typography": "^0.2.0",
   "autoprefixer": "^10.0.0",
-  "lazysizes": "^5.2.2",
   "postcss-cli": "^8.0.0",
   "postcss-purgecss": "^2.0.3",
-  "tailwindcss": "^1.8.10",
-  "turbolinks": "^5.2.0"
+  "tailwindcss": "^1.8.10"
  },
  "description": "Starter files for a Hugo project",
  "devDependencies": {
-  "@babel/preset-env": "^7.11.5"
+  "@babel/cli": "^7.11.6",
+  "@babel/core": "^7.11.6",
+  "@babel/preset-env": "^7.11.5",
+  "babel-loader": "^8.1.0",
+  "lazysizes": "^5.2.2",
+  "quicklink": "^2.0.0"
  },
  "license": "MIT",
  "main": "index.js",
