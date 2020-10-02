@@ -9,12 +9,7 @@
    "tailwindcss": "project"
   },
   "devDependencies": {
-   "@babel/cli": "project",
-   "@babel/core": "project",
-   "@babel/preset-env": "project",
-   "babel-loader": "project",
-   "lazysizes": "project",
-   "quicklink": "project"
+   "@babel/preset-env": "project"
   }
  },
  "dependencies": {
