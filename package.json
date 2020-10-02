@@ -10,7 +10,9 @@
    "tailwindcss": "project",
    "turbolinks": "project"
   },
-  "devDependencies": {}
+  "devDependencies": {
+   "@babel/preset-env": "project"
+  }
  },
  "dependencies": {
   "@tailwindcss/typography": "^0.2.0",
@@ -22,7 +24,9 @@
   "turbolinks": "^5.2.0"
  },
  "description": "Starter files for a Hugo project",
- "devDependencies": {},
+ "devDependencies": {
+  "@babel/preset-env": "^7.11.5"
+ },
  "license": "MIT",
  "main": "index.js",
  "name": "pej-blog-theme",
