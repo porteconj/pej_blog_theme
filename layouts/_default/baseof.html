@@ -5,10 +5,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-{{ partial "meta" . }}
-{{partial "styles" .}}
-{{partial "scripts" .}}
+  {{ partial "meta" . }}
 
+  {{ $js := resources.Get "output/index.js" }}
+  {{ with $js }}
+  {{ $secureJS := . | resources.Fingerprint }}
+  <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"
+    crossorigin="anonymous" defer></script>
+  {{ end }}
+
+ {{/* styles */}}
+ {{ $options := dict "inlineImports" true }}
+ {{ $styles := resources.Get "css/styles.css" }}
+ {{ $styles = $styles | resources.PostCSS $options }}
+ {{ if  hugo.IsProduction  }}
+   {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+ {{ end }}
+ <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
 </head>
 
 <body>
@@ -21,6 +34,7 @@
   {{ if hugo.IsProduction }}
     {{partial "analytics.html" .}}
   {{ end }}
+
 </body>
 
 </html>

@@ -15,10 +15,17 @@ module.exports = {
 		// See https://github.com/tailwindlabs/tailwindcss/pull/2159
 		applyComplexClasses: true
 	},
+	theme: {
+		extend: {
+		  colors: {
+			pejGreen: "#008060",
+			pejRed: "#ED1C24"
+		  }
+		},
+	  },
 	purge: {
 		enabled: process.env.HUGO_ENVIRONMENT === 'production',
 		content: [ './hugo_stats.json' ],
-		mode: 'all',
 		options: {
 			//whitelist: [ 'pl-1', 'pl-3' ],
 			defaultExtractor: (content) => {
@@ -28,13 +35,5 @@ module.exports = {
 			}
 		}
 	},
-	theme: {
-		extend: {
-		  colors: {
-			pejGreen: "#008060",
-			pejRed: "#ED1C24"
-		  }
-		},
-	  },
 	plugins: [ typography ]
 };
