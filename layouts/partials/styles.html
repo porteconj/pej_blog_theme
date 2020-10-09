@@ -3,7 +3,7 @@
   {{ $css := resources.Get "output/index.css"  }}
   {{ with $css }}
   {{ $securecss := . | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $securecss.Permalink | relURL  }}" integrity="{{ $securecss.Data.Integrity }}"
+  <link rel="stylesheet" href="{{ $securecss.Permalink }}" integrity="{{ $securecss.Data.Integrity }}"
     crossorigin="anonymous">
   {{ end }}
 
