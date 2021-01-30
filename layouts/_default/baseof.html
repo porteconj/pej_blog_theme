@@ -7,12 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   {{ partial "meta" . }}
 
-  {{ $js := resources.Get "output/index.js" }}
-  {{ with $js }}
-  {{ $secureJS := . | resources.Fingerprint }}
-  <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"
-    crossorigin="anonymous" defer></script>
-  {{ end }}
+
+  {{ $js := resources.Get "index.js" | js.Build (dict "minify" true "target" "es2015") | fingerprint }}
+  <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"
+  crossorigin="anonymous" defer></script>
 
   {{partial "styles.html" . }}
 
