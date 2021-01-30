@@ -2,26 +2,24 @@
  "author": "",
  "comments": {
   "dependencies": {
-   "@fullhuman/postcss-purgecss": "project",
+   "@tailwindcss/typography": "project",
    "autoprefixer": "project",
    "lazysizes": "project",
-   "parcel-bundler": "project",
+   "postcss": "project",
    "postcss-cli": "project",
-   "postcss-import": "project",
-   "postcss-modules": "project",
+   "postcss-purgecss": "project",
    "tailwindcss": "project",
    "turbolinks": "project"
   },
   "devDependencies": {}
  },
  "dependencies": {
-  "@fullhuman/postcss-purgecss": "^1.1.0",
-  "autoprefixer": "^9.4.7",
+  "@tailwindcss/typography": "^0.3.0",
+  "autoprefixer": "^10.0.4",
   "lazysizes": "^5.2.0",
-  "parcel-bundler": "^1.11.0",
-  "postcss-cli": "^6.1.1",
-  "postcss-import": "^12.0.1",
-  "postcss-modules": "^1.4.1",
+  "postcss": "^8.1.10",
+  "postcss-cli": "^8.0.0",
+  "postcss-purgecss": "^2.0.3",
   "tailwindcss": "^2.0.2",
   "turbolinks": "^5.2.0"
  },
