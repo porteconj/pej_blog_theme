@@ -21,9 +21,13 @@ module.exports = {
 	important: true, // See https://tailwindcss.com/docs/configuration#important
 	purge: {
 		enabled: process.env.HUGO_ENVIRONMENT === 'production',
+		options: {
+			safelist: ["text-5xl", "my-16"],
+		  },
     content: [
       './hugo_stats.json',
-      './layouts/**/*.html',
+	  './layouts/**/*.html',
+	  './layouts/**/*.*.html'
 		],
 		extractors: [
       {
