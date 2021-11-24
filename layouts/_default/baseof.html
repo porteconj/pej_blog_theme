@@ -7,10 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   {{ partial "meta" . }}
 
-  {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{ end -}}
-
+<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL}}/posts/index.xml" title="$.Site.Title">
 
   {{ $js := resources.Get "index.js" | js.Build (dict "minify" true "target" "es2015") | fingerprint }}
   <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"
