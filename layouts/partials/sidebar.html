@@ -41,6 +41,16 @@
                 {{end}}
             </ul>
         </div>
+        <div>
+            <p class="font-bold text-gray-500 uppercase my-0">Categories</p>
+
+            <ul>
+                {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+                <li><a class="no-underline hover:underline" href="{{.Permalink}}">{{.Title}}</a></li>
+             {{end}}
+            </ul>
+
+        </div>
         {{end}}
         {{end}}
     </div>
