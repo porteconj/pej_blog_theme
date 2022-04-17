@@ -1,0 +1,11 @@
+
+<div class="col-span-4 lg:col-span-1 order-4">
+  <p class="font-bold text-gray-500 uppercase my-0">Categories</p>
+
+  <ul>
+      {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+      <li class="my-1"><a class="no-underline hover:underline" href="{{.Permalink}}">{{.Title}}</a></li>
+   {{end}}
+  </ul>
+
+</div>

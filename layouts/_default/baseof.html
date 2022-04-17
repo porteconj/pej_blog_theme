@@ -18,10 +18,20 @@
 </head>
 
 <body>
-  <main class="container mx-auto grid grid-cols-4 gap-4 lg:gap-12 lg:items-start px-12 lg:px-0">
+  <main class="container my-16 mx-auto grid grid-cols-8 gap-4 lg:gap-12 lg:items-start px-12 lg:px-0">
+
+    {{ partialCached "header.html" . }}
+    {{ partialCached "sidebar.html" . }}
+
+    <div class="content col-span-8 lg:col-span-5 order-2 lg:order-3">
+
     {{ block "main" . }}
 
     {{ end }}
+  </div>
+
+    {{ partialCached "categories.html" . }}
+
   </main>
   {{ partialCached "footer.html" . }}
   {{ if hugo.IsProduction }}

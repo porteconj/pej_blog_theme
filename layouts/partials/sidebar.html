@@ -1,5 +1,5 @@
-<div class="sidebar col-span-4 lg:col-span-1 order-3 lg:order-1">
-    <div class="text-sm">
+
+<div class="sidebar col-span-6 lg:col-span-2 order-3 lg:order-2">
         {{with .Site.GetPage "sidebar.md"}}
         <h2 class="text-4xl leading-tight font-bold mb-12"><a class="text-black no-underline"
                 href="{{.Site.BaseURL}}">{{.Params.Title | safeHTML}}</a></h2>
@@ -30,28 +30,23 @@
             {{.}}
             {{end}}
         </div>
+        <div class="my-6">
+            <p class="font-bold text-gray-500 uppercase my-0">Visitor statistics</p>
+            <div id="analytics">
+
+            </div>
+        </div>
         {{with .Params.sidebarLinks}}
         <div class="my-6">
             <ul>
                 <li class="font-bold text-gray-500 uppercase">Useful links</li>
                 {{range . }}
-                <li class="py-1">
+                <li class="my-1">
                     <a class="no-underline hover:underline" href="{{.url}}">{{.title}}</a>
                 </li>
                 {{end}}
             </ul>
         </div>
-        <div>
-            <p class="font-bold text-gray-500 uppercase my-0">Categories</p>
-
-            <ul>
-                {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
-                <li><a class="no-underline hover:underline" href="{{.Permalink}}">{{.Title}}</a></li>
-             {{end}}
-            </ul>
-
-        </div>
         {{end}}
         {{end}}
-    </div>
 </div>

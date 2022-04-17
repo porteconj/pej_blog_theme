@@ -1,7 +1,5 @@
 {{ define "main" }}
-{{ partialCached "header.html" . }}
-{{ partialCached "sidebar.html" . }}
-<div class="content col-span-4 lg:col-span-3 order-1 lg:order-2">
+
     {{range where .Site.Pages "Section" "posts" }}
     {{ if ne .File.LogicalName "_index.md" }}
     <article class="mb-16">
@@ -14,9 +12,4 @@
     </article>
     {{ end }}
     {{end}}
-</div>
-
-
-
-
 {{ end }}

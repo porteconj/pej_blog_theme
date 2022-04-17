@@ -15,6 +15,18 @@ a {
   @apply my-8;
 }
 
+.analytics-item {
+	@apply flex justify-between items-center;
+}
+
+.analytics-item > .title {
+	@apply font-bold text-gray-600;
+}
+
+.analytics-item > .value {
+	@apply font-bold text-pejGreen;
+}
+
 .wrapper {
 	width: 100%;
 	min-width: 320px;

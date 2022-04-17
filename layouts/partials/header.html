@@ -1,8 +1,7 @@
-<div class="col-span-4 lg:col-span-1 my-8">
+<div class="col-span-full lg:max-w-lg order-1">
     <a href="{{.Site.BaseURL}}">
         {{ with readFile "/static/logo.svg"  }}
         {{. | safeHTML}}
         {{end}}
     </a>
 </div>
-<div class="col-span-4 lg:col-span-3 lg:my-8"></div>
