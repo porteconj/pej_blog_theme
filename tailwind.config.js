@@ -22,7 +22,7 @@ module.exports = {
 	purge: {
 		enabled: process.env.HUGO_ENVIRONMENT === 'production',
 		options: {
-			safelist: ["text-5xl", "my-16"],
+			safelist: ["text-5xl", "my-16", "pejGreen", "pejRed", "justify-between", "items-center"],
 		  },
     content: [
       './hugo_stats.json',
@@ -39,7 +39,7 @@ module.exports = {
       },
     ],
 		mode: 'all',
-		
+
 	},
 	plugins: [ typography ]
 };
