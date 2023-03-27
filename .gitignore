@@ -37,6 +37,5 @@ exampleSite
 resources/_gen
 _vendor/
 content/
-static/
 
 hugo_stats.json

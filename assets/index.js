@@ -7,8 +7,7 @@ import analyticsFetch from './fetch.js';
 analyticsFetch();
 
 
-
-
-var Turbolinks = require("turbolinks")
-Turbolinks.start()
+// import * as Turbo from "@hotwired/turbo"
+//
+// Turbo.start()
 

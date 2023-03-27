@@ -14,17 +14,15 @@
   "devDependencies": {}
  },
  "dependencies": {
-  "@tailwindcss/typography": "^0.3.0",
+  "@hotwired/turbo": "^7.3.0",
+  "@tailwindcss/typography": "^0.5.9",
   "autoprefixer": "^10.0.4",
   "lazysizes": "^5.2.0",
   "postcss": "^8.1.10",
-  "postcss-cli": "^8.0.0",
-  "postcss-purgecss": "^2.0.3",
-  "tailwindcss": "^2.0.2",
-  "turbolinks": "^5.2.0"
+  "postcss-cli": "^10.1.0",
+  "tailwindcss": "^3.2.7"
  },
  "description": "",
- "devDependencies": {},
  "license": "MIT",
  "main": "index.js",
  "name": "pej_blog_theme",
