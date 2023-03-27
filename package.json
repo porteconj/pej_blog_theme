@@ -1,32 +1,32 @@
 {
- "author": "",
- "comments": {
-  "dependencies": {
-   "@tailwindcss/typography": "project",
-   "autoprefixer": "project",
-   "lazysizes": "project",
-   "postcss": "project",
-   "postcss-cli": "project",
-   "postcss-purgecss": "project",
-   "tailwindcss": "project",
-   "turbolinks": "project"
+  "author": "",
+  "comments": {
+    "dependencies": {
+      "@hotwired/turbo": "project",
+      "@tailwindcss/typography": "project",
+      "autoprefixer": "project",
+      "lazysizes": "project",
+      "postcss": "project",
+      "postcss-cli": "project",
+      "tailwindcss": "project"
+    },
+    "devDependencies": {}
   },
-  "devDependencies": {}
- },
- "dependencies": {
-  "@hotwired/turbo": "^7.3.0",
-  "@tailwindcss/typography": "^0.5.9",
-  "autoprefixer": "^10.0.4",
-  "lazysizes": "^5.2.0",
-  "postcss": "^8.1.10",
-  "postcss-cli": "^10.1.0",
-  "tailwindcss": "^3.2.7"
- },
- "description": "",
- "license": "MIT",
- "main": "index.js",
- "name": "pej_blog_theme",
- "repository": "",
- "scripts": {},
- "version": "2.0.0"
+  "dependencies": {
+    "@hotwired/turbo": "^7.3.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.0.4",
+    "lazysizes": "^5.2.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.2.7"
+  },
+  "description": "",
+  "devDependencies": {},
+  "license": "MIT",
+  "main": "index.js",
+  "name": "pej_blog_theme",
+  "repository": "",
+  "scripts": {},
+  "version": "2.0.0"
 }
