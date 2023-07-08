@@ -1,13 +1,24 @@
 
 
-import lazySizes from 'lazysizes';
-import 'lazysizes/plugins/blur-up/ls.blur-up';
 import analyticsFetch from './fetch.js';
 
-analyticsFetch();
+const redirectIfToken = () => {
+    const url = window.location.href;
+
+    if (url.includes('#')) {
+        const token = url.split('#')[1];
+        window.location.href = `/admin/#${token}`;
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    analyticsFetch();
+
+});
+
+redirectIfToken();
 
 
-// import * as Turbo from "@hotwired/turbo"
-//
-// Turbo.start()
+
+
 
