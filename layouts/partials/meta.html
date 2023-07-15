@@ -30,9 +30,9 @@
 <meta name="twitter:card" content="summary_large_image">
 {{end}}
 {{else}}
-{{$filename := $.Title | urlize}}
-<meta property="og:image" content="{{$.Site.Params.seoImagePath}}{{$filename | replaceRE "[[:punct:]]" "-" }}.png">
-<meta name="twitter:image" content="{{$.Site.Params.seoImagePath}}{{$filename | replaceRE "[[:punct:]]" "-" }}.png">
+{{$urlTitle := $.Title | urlize}}
+<meta property="og:image" content="{{$.Site.BaseURL}}/og?title={{$urlTitle}}">
+<meta name="twitter:image" content="{{$.Site.BaseURL}}/og?title={{$urlTitle}}">
 <meta name="twitter:card" content="summary_large_image">
 {{end}}
 
