@@ -1,16 +1,17 @@
 <div class="space-y-4">
   <img
-    class="h-32 w-32 rounded-full border-2 border-pejGreen mb-4"
+    class="h-40 w-40 rounded-full border-2 border-pejGreen object-cover
+    "
     src="{{.picture}}"
     alt="Photo of {{.name}}"
   />
   {{with .name}}
   <h3 class="text-lg font-bold">{{.}}</h3>
   {{end}} {{with .title}}
-  <span class="text-xs text-gray-500 uppercase font-bold block">{{.}}</span>
+  <p class="text-xs text-gray-500 uppercase font-bold block">{{.}}</p>
   {{end}} {{with .bio}}
   <p>{{.}}</p>
   {{end}} {{range .links}}
-  <a class="pr-1" href="{{.link}}">{{.title}}</a>
+  <a class="block" href="{{.link}}">{{.title}}</a>
   {{end}}
 </div>

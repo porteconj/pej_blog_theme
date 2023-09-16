@@ -2,9 +2,9 @@
 
     {{range where .Site.Pages "Section" "posts" }}
     {{ if ne .File.LogicalName "_index.md" }}
-    <article class="mb-16">
+    <article class="space-y-2">
         <h2 class="text-3xl font-bold"><a href="{{.Permalink}}">{{.Title}}</a></h2>
-        {{with .PublishDate }}<span class="text-gray-600">{{.Format "January 2, 2006"}}</span>{{end}}
+        {{with .PublishDate }}<p class="text-gray-600">{{.Format "January 2, 2006"}}</p>{{end}}
 
         <div class="leading-loose">
             {{.Summary}}

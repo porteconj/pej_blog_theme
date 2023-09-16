@@ -1,11 +1,14 @@
-
 <div class="col-span-4 lg:col-span-2 order-4">
   <p class="font-bold text-gray-500 uppercase my-0">Categories</p>
 
-  <ul>
-      {{range sort ($.Site.GetPage "taxonomyTerm" "categories").Pages "Title" }}
-      <li class="my-1"><a class="no-underline hover:underline" href="{{.Permalink}}">{{.Title}}</a></li>
-   {{end}}
-  </ul>
+  <ul class="space-y-2">
+    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <li>
+      <a class="no-underline hover:underline" href="{{.Page.Permalink}}">
+        {{.Page.Title}} ({{ len $taxonomy.Pages }})
+      </a>
+    </li>
 
+    {{ end }}
+  </ul>
 </div>

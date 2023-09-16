@@ -1,19 +1,21 @@
-<div class="sidebar col-span-6 lg:col-span-2 order-3 lg:order-2">
+<div class="sidebar col-span-6 lg:col-span-2 order-3 lg:order-2 space-y-9">
   {{with $.Site.Data.blogInfo}}
   <h2 class="text-4xl leading-tight font-bold mb-12">
     <a class="text-black no-underline" href="{{.Site.BaseURL}}"
       >{{.title | safeHTML}}</a
     >
   </h2>
-  {{ range $.Site.Data.curators }} {{ partial "sidebar/curator.html" . }} {{ end
-  }} {{with $.Site.Data.blogInfo}}
-  <div class="my-6">
-    <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
-    {{.blogInfo | safeHTML}} {{end}}
-  </div>
-  <div class="my-6">
+  {{ range sort $.Site.Data.curators "name" "desc" }} {{ partial "sidebar/curator.html" . }} {{ end
+  }} 
+  <div>
     <p class="font-bold text-gray-500 uppercase my-0">Visitor statistics</p>
     <div id="analytics"></div>
   </div>
-  {{end}} {{ partial "sidebar/links.html" .}}
+  {{end}} 
+  {{with $.Site.Data.blogInfo}}
+  <div>
+    <p class="font-bold text-gray-500 uppercase my-0">About this blog</p>
+    {{.blogInfo | safeHTML}} {{end}}
+  </div>
+  {{ partial "sidebar/links.html" .}}
 </div>
