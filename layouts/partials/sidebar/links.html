@@ -1,0 +1,7 @@
+<ul>
+    {{ range $.Site.Data.links}}
+    <li class="my-1">
+        <a class="no-underline hover:underline" href="{{.url}}">{{.title}}</a>
+    </li>
+    {{end}}
+ </ul>
