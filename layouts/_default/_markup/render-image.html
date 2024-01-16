@@ -2,7 +2,7 @@
 $caption = . | safeHTML }} {{ end }}
 <figure>
   <img
-    src="{{ .Destination | safeURL }}"
+    src="{{ .Destination | safeURL }}-/format/webp/"
     loading="lazy"
     alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
   />
